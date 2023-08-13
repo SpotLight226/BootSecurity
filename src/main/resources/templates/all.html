@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>All</title>
+</head>
+<body>
+  <h3>all 페이지</h3>
+
+    <div sec:authorize="isAuthenticated()"> <!-- 인증되었다면 true -->
+        [[${#authentication.principal}]]<br/> <!-- userDetail 객체 -->
+        [[${#authentication.principal.username}]]<br/> <!-- UserDetails 객체에서 만든 getter 가 사용됩니다. -->
+        [[${#authentication.principal.password}]]<br/> <!-- UserDetails 객체에서 만든 getter 가 사용됩니다. -->
+        [[${#authentication.principal.role}]]<br/>
+    </div>
+</body>
+</html>

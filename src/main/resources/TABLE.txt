@@ -1,0 +1,6 @@
+# TABLE
+CREATE TABLE USERS (
+		USERNAME VARCHAR(50) PRIMARY KEY, # ID ( 시큐리티에서 기본적으로 ID로 사용 )
+        PASSWORD VARCHAR(50), # PW
+        ROLE VARCHAR(50) # 권한
+);
